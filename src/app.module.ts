@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { ControlsModule } from './controls/controls.module';
 
 @Module({
   imports: [
@@ -39,10 +40,9 @@ import { AuthModule } from './auth/auth.module';
 
     AuthModule,
 
+    ControlsModule,
+
     // Feature modules will be added here
-    // AuthModule,
-    // UsersModule,
-    // ControlsModule,
     // RisksModule,
     // AssetsModule,
     // TreatmentPlansModule,
