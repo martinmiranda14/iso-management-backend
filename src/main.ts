@@ -42,6 +42,7 @@ async function bootstrap() {
     .addTag('Authentication', 'User authentication endpoints')
     .addTag('Users', 'User management endpoints')
     .addTag('Controls', 'ISO 27002 controls management')
+    .addTag('documents', 'ISO 27001 document management (policies and procedures)')
     .addTag('Risks', 'Risk assessment and management')
     .addTag('Assets', 'Information assets management')
     .addTag('Treatment Plans', 'Risk treatment plans')
