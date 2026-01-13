@@ -1,98 +1,374 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# ISO Management System - Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Sistema de gestión integral para implementación y administración de ISO 27001/27002. Una solución completa y genérica diseñada para cualquier empresa u organización que necesite gestionar su Sistema de Gestión de Seguridad de la Información (SGSI).
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descripción
 
-## Description
+Este proyecto es un backend construido con NestJS que proporciona una API REST completa para la gestión de un SGSI basado en las normas ISO 27001 e ISO 27002. El sistema incluye gestión de documentos, controles, riesgos, activos y planes de tratamiento.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Características Principales
 
-## Project setup
+### ✅ Módulo de Documentos (Implementado)
 
-```bash
-$ npm install
+Sistema completo de gestión de documentos con:
+
+- **Gestión de Políticas y Procedimientos ISO 27001**
+  - 22 plantillas predefinidas exhaustivas (POL-001 a POL-015, PROC-001 a PROC-007)
+  - Cobertura completa de todos los dominios de ISO 27001
+  - Contenido en Markdown para fácil edición
+
+- **Sistema de Versionamiento**
+  - Versionamiento semántico (major.minor)
+  - Historial completo de versiones
+  - Tracking de cambios y notas de revisión
+  - Auditoría completa de modificaciones
+
+- **Flujo de Aprobación**
+  - Estados: Borrador → En Revisión → Aprobado → Obsoleto
+  - Aprobaciones formales con registros
+  - Fechas de revisión automáticas
+  - Gestión de ciclo de vida completo
+
+- **Generación de PDFs**
+  - Generación profesional con Puppeteer
+  - Parsing de Markdown a HTML
+  - Diseño profesional con estilos CSS
+  - Metadatos en el documento (código, versión, fechas)
+  - Badges de estado y tipo
+
+- **Sistema de Plantillas**
+  - Creación de documentos desde plantillas
+  - Seeder automático en inicio de aplicación
+  - Plantillas genéricas adaptables a cualquier organización
+
+- **Vinculación con Controles**
+  - Relación de documentos con controles ISO 27001
+  - Trazabilidad completa
+
+### 🚧 Módulos Pendientes
+
+- **Controles** (estructura creada, pendiente implementación)
+- **Riesgos** (pendiente)
+- **Activos** (pendiente)
+- **Planes de Tratamiento** (pendiente)
+
+## Plantillas de Documentos Incluidas
+
+### Políticas (15)
+
+1. **POL-001**: Política de Seguridad de la Información
+2. **POL-002**: Política de Control de Acceso
+3. **POL-003**: Política de Uso Aceptable
+4. **POL-004**: Política de Clasificación de la Información
+5. **POL-005**: Política de Criptografía
+6. **POL-006**: Política de Seguridad Física
+7. **POL-007**: Política de Gestión de Recursos Humanos
+8. **POL-008**: Política de Gestión de Activos
+9. **POL-009**: Política de Desarrollo Seguro
+10. **POL-010**: Política de Gestión de Proveedores
+11. **POL-011**: Política de Continuidad del Negocio (BCP/DR)
+12. **POL-012**: Política de Cumplimiento Legal y Regulatorio
+13. **POL-013**: Política de Seguridad en la Nube (Cloud Security)
+14. **POL-014**: Política de Gestión de Identidades y Accesos (IAM)
+15. **POL-015**: Política de Respuesta a Incidentes de Ciberseguridad
+
+### Procedimientos (7)
+
+1. **PROC-001**: Gestión de Incidentes de Seguridad
+2. **PROC-002**: Gestión de Cambios
+3. **PROC-003**: Backup y Recuperación
+4. **PROC-004**: Gestión de Vulnerabilidades y Parches
+5. **PROC-005**: Control de Acceso y Gestión de Usuarios
+6. **PROC-006**: Análisis de Riesgos (ISO 27005)
+7. **PROC-007**: Monitoreo y Revisión de Seguridad
+
+## Stack Tecnológico
+
+- **Framework**: NestJS 10
+- **Lenguaje**: TypeScript
+- **ORM**: TypeORM
+- **Base de Datos**: SQLite (desarrollo)
+- **Autenticación**: JWT + Passport
+- **Validación**: class-validator
+- **Documentación API**: Swagger/OpenAPI + Scalar
+- **PDF Generation**: Puppeteer + Marked
+- **Testing**: Jest
+
+## Estructura del Proyecto
+
+```
+src/
+├── auth/                    # Autenticación y autorización
+│   ├── guards/              # Guards de JWT
+│   └── strategies/          # Estrategias de Passport
+├── users/                   # Gestión de usuarios
+├── controls/                # Controles ISO 27002
+├── documents/               # ✅ Gestión de documentos
+│   ├── entities/
+│   │   ├── document.entity.ts           # Entidad principal
+│   │   └── document-version.entity.ts   # Historial de versiones
+│   ├── dto/                             # DTOs de validación
+│   ├── services/
+│   │   ├── pdf-generator.service.ts     # Generación de PDFs
+│   │   └── templates-seeder.service.ts  # Carga de plantillas
+│   ├── templates/
+│   │   ├── iso27001-templates.ts        # Plantillas base
+│   │   ├── additional-templates.ts      # Plantillas adicionales
+│   │   └── comprehensive-templates.ts   # Plantillas exhaustivas
+│   ├── documents.service.ts             # Lógica de negocio
+│   ├── documents.controller.ts          # API REST
+│   └── documents.module.ts
+├── risks/                   # (Pendiente)
+├── assets/                  # (Pendiente)
+└── treatment-plans/         # (Pendiente)
 ```
 
-## Compile and run the project
+## Instalación
 
 ```bash
-# development
-$ npm run start
+# Clonar el repositorio
+git clone <repository-url>
+cd iso-management-backend
 
-# watch mode
-$ npm run start:dev
+# Instalar dependencias
+npm install
 
-# production mode
-$ npm run start:prod
+# Configurar variables de entorno
+cp .env.example .env
+# Editar .env con tu configuración
+
+# Iniciar base de datos (SQLite se crea automáticamente)
 ```
 
-## Run tests
+## Configuración
+
+Crear archivo `.env` con:
+
+```env
+# Server
+PORT=3002
+API_PREFIX=api/v1
+NODE_ENV=development
+
+# Database (SQLite)
+DB_TYPE=sqlite
+DB_DATABASE=./iso-management.db
+
+# JWT
+JWT_SECRET=your-super-secret-jwt-key-change-this
+JWT_EXPIRATION=7d
+
+# CORS
+CORS_ORIGIN=http://localhost:4200
+
+# API Documentation
+API_TITLE=ISO Management System API
+API_DESCRIPTION=API for ISO 27001/27002 Management System
+API_VERSION=1.0
+```
+
+## Ejecución
 
 ```bash
-# unit tests
-$ npm run test
+# Desarrollo
+npm run start:dev
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Producción
+npm run build
+npm run start:prod
 ```
 
-## Deployment
+## Endpoints de la API
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+### Autenticación
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+```
+POST   /api/v1/auth/login           # Iniciar sesión
+POST   /api/v1/auth/register        # Registrar usuario
+GET    /api/v1/auth/profile         # Obtener perfil
+```
+
+### Documentos
+
+```
+# CRUD Básico
+POST   /api/v1/documents                      # Crear documento
+GET    /api/v1/documents                      # Listar todos
+GET    /api/v1/documents/templates            # Obtener plantillas
+GET    /api/v1/documents/:id                  # Obtener uno
+PUT    /api/v1/documents/:id                  # Actualizar
+DELETE /api/v1/documents/:id                  # Eliminar
+
+# Flujo de Trabajo
+PATCH  /api/v1/documents/:id/status           # Cambiar estado
+POST   /api/v1/documents/:id/send-to-review   # Enviar a revisión
+POST   /api/v1/documents/:id/approve          # Aprobar documento
+POST   /api/v1/documents/:id/obsolete         # Marcar obsoleto
+
+# Versionamiento
+GET    /api/v1/documents/:id/versions         # Historial de versiones
+GET    /api/v1/documents/:id/versions/:verId  # Versión específica
+
+# Utilidades
+POST   /api/v1/documents/from-template/:id    # Crear desde plantilla
+GET    /api/v1/documents/:id/pdf              # Generar PDF
+```
+
+## Documentación de la API
+
+Una vez iniciada la aplicación, la documentación está disponible en:
+
+- **Swagger UI**: http://localhost:3002/api/docs
+- **Scalar API Reference**: http://localhost:3002/api/reference
+
+## Modelo de Datos - Documentos
+
+### Document Entity
+
+```typescript
+{
+  id: UUID
+  code: string              // ej: "POL-001"
+  title: string
+  description: string
+  content: string           // Markdown
+  type: DocumentType        // POLICY | PROCEDURE
+  category: DocumentCategory
+  status: DocumentStatus    // DRAFT | IN_REVIEW | APPROVED | OBSOLETE
+  version: string           // "1.0", "2.1", etc.
+  majorVersion: number
+  minorVersion: number
+  ownerId: string
+  approverId?: string
+  approvedAt?: Date
+  reviewDate?: Date         // Fecha próxima revisión
+  reviewPeriodMonths: number
+  relatedControlIds: string[]
+  tags: string[]
+  isTemplate: boolean
+  changeNotes?: string
+  createdAt: Date
+  updatedAt: Date
+}
+```
+
+### DocumentVersion Entity
+
+```typescript
+{
+  id: UUID
+  documentId: UUID
+  version: string
+  majorVersion: number
+  minorVersion: number
+  content: string
+  changeNotes: string
+  createdById?: string
+  createdByName?: string
+  createdAt: Date
+}
+```
+
+## Flujo de Trabajo de Documentos
+
+```
+┌──────────┐
+│  DRAFT   │ ◄── Estado inicial
+└────┬─────┘
+     │ sendToReview()
+     ▼
+┌──────────┐
+│IN_REVIEW │
+└────┬─────┘
+     │ approve()
+     ▼
+┌──────────┐
+│ APPROVED │ ◄── Incrementa versión
+└────┬─────┘
+     │ makeObsolete()
+     ▼
+┌──────────┐
+│ OBSOLETE │
+└──────────┘
+```
+
+## Testing
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+# Unit tests
+npm run test
+
+# E2E tests
+npm run test:e2e
+
+# Test coverage
+npm run test:cov
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## Características de Seguridad
 
-## Resources
+- ✅ Autenticación JWT
+- ✅ Guards de protección en todos los endpoints
+- ✅ Validación de DTOs con class-validator
+- ✅ Passwords hasheados con bcrypt
+- ✅ CORS configurado
+- ✅ Helmet para headers de seguridad
+- ✅ Rate limiting (pendiente)
 
-Check out a few resources that may come in handy when working with NestJS:
+## Roadmap
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### Fase 1: Documentos ✅ (Completada)
+- [x] Entidades y DTOs
+- [x] CRUD completo
+- [x] Sistema de versionamiento
+- [x] Flujo de aprobación
+- [x] Generación de PDFs
+- [x] 22 plantillas predefinidas
+- [x] Sistema de seeder
 
-## Support
+### Fase 2: Controles (Próxima)
+- [ ] CRUD de controles ISO 27001
+- [ ] Anexo A completo
+- [ ] Estado de implementación
+- [ ] Evidencias por control
+- [ ] Vinculación con documentos
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Fase 3: Riesgos
+- [ ] Análisis de riesgos
+- [ ] Matriz de probabilidad/impacto
+- [ ] Registro de riesgos
+- [ ] Vinculación con activos y controles
 
-## Stay in touch
+### Fase 4: Activos
+- [ ] Inventario de activos
+- [ ] Clasificación de activos
+- [ ] Propietarios de activos
+- [ ] Valoración
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Fase 5: Planes de Tratamiento
+- [ ] Planes de tratamiento de riesgos
+- [ ] Seguimiento de acciones
+- [ ] Métricas y reportes
 
-## License
+### Fase 6: Frontend Angular
+- [ ] Dashboard
+- [ ] Módulo de documentos
+- [ ] Módulo de controles
+- [ ] Módulo de riesgos
+- [ ] Reportes y gráficos
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## Contribución
+
+Este es un proyecto genérico diseñado para ser lo más completo posible y adaptable a cualquier organización. Las contribuciones son bienvenidas.
+
+## Licencia
+
+[MIT licensed](LICENSE)
+
+## Autor
+
+Desarrollado para la gestión integral de ISO 27001/27002
+
+## Soporte
+
+Para preguntas o soporte, crear un issue en el repositorio.
